@@ -1,0 +1,123 @@
+I, [2020-02-26T13:29:20.921147 #30392]  INFO -- : Cleared interactions for example "CarsApiConsumerTests..ctor"
+I, [2020-02-26T13:29:22.355938 #30392]  INFO -- : Registered expected interaction GET /cars
+D, [2020-02-26T13:29:22.358345 #30392] DEBUG -- : {
+  "description": "a request to retrieve all cars",
+  "providerState": "there are cars with ids '45D80D13-D5A2-48D7-8353-CBB4C0EAABF5', '83F9262F-28F1-4703-AB1A-8CFD9E8249C9' and '3E83A96B-2A0C-49B1-9959-26DF23F83AEB'",
+  "request": {
+    "method": "get",
+    "path": "/cars",
+    "headers": {
+      "Accept": "application/json"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "body": [
+      {
+        "carId": "45d80d13-d5a2-48d7-8353-cbb4c0eaabf5",
+        "mileage1": 0,
+        "fuel": "Gasoline"
+      },
+      {
+        "carId": "83f9262f-28f1-4703-ab1a-8cfd9e8249c9",
+        "mileage1": 0,
+        "fuel": "Gasoline"
+      },
+      {
+        "carId": "3e83a96b-2a0c-49b1-9959-26df23f83aeb",
+        "mileage1": 15000,
+        "fuel": "Diesel"
+      }
+    ]
+  },
+  "metadata": null
+}
+I, [2020-02-26T13:29:22.375289 #30392]  INFO -- : Received request GET /cars
+D, [2020-02-26T13:29:22.375289 #30392] DEBUG -- : {
+  "path": "/cars",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Accept": "application/json",
+    "Host": "localhost:9222",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2020-02-26T13:29:22.376289 #30392]  INFO -- : Found matching response for GET /cars
+D, [2020-02-26T13:29:22.377287 #30392] DEBUG -- : {
+  "status": 200,
+  "headers": {
+    "Content-Type": "application/json; charset=utf-8"
+  },
+  "body": [
+    {
+      "carId": "45d80d13-d5a2-48d7-8353-cbb4c0eaabf5",
+      "mileage1": 0,
+      "fuel": "Gasoline"
+    },
+    {
+      "carId": "83f9262f-28f1-4703-ab1a-8cfd9e8249c9",
+      "mileage1": 0,
+      "fuel": "Gasoline"
+    },
+    {
+      "carId": "3e83a96b-2a0c-49b1-9959-26df23f83aeb",
+      "mileage1": 15000,
+      "fuel": "Diesel"
+    }
+  ]
+}
+I, [2020-02-26T13:29:22.427667 #30392]  INFO -- : Verifying - interactions matched for example "CarsApiConsumerTests.GetAllCars_WhenCalled_ReturnsAllEvents"
+I, [2020-02-26T13:29:22.456646 #30392]  INFO -- : Cleared interactions for example "CarsApiConsumerTests..ctor"
+I, [2020-02-26T13:29:22.482174 #30392]  INFO -- : Registered expected interaction POST /cars
+D, [2020-02-26T13:29:22.483189 #30392] DEBUG -- : {
+  "description": "a request to create a new car",
+  "request": {
+    "method": "post",
+    "path": "/cars",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "body": {
+      "carId": "1f587704-2dcc-4313-a233-7b62b4b469db",
+      "mileage": 0,
+      "fuel": "Gasoline"
+    }
+  },
+  "response": {
+    "status": 201,
+    "headers": {
+    }
+  },
+  "metadata": null
+}
+I, [2020-02-26T13:29:22.498598 #30392]  INFO -- : Received request POST /cars
+D, [2020-02-26T13:29:22.500879 #30392] DEBUG -- : {
+  "path": "/cars",
+  "query": "",
+  "method": "post",
+  "body": {
+    "carId": "1f587704-2dcc-4313-a233-7b62b4b469db",
+    "mileage": 0,
+    "fuel": "Gasoline"
+  },
+  "headers": {
+    "Content-Length": "78",
+    "Content-Type": "application/json; charset=utf-8",
+    "Host": "localhost:9222",
+    "Expect": "100-continue",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2020-02-26T13:29:22.504182 #30392]  INFO -- : Found matching response for POST /cars
+D, [2020-02-26T13:29:22.511338 #30392] DEBUG -- : {
+  "status": 201,
+  "headers": {
+  }
+}
+I, [2020-02-26T13:29:22.533909 #30392]  INFO -- : Verifying - interactions matched for example "CarsApiConsumerTests.CreateEvent_WhenCalledWithEvent_Succeeds"
+I, [2020-02-26T13:29:22.556440 #30392]  INFO -- : Writing pact for Car API to ../../../pacts/car_api_consumer-car_api.json
+I, [2020-02-26T13:29:22.619757 #30392]  INFO -- : Cleared interactions for example "ConsumerCarApiPact.Dispose ExceptionAggregator.Run <BeforeTestClassFinishedAsync>d__14.MoveNext"

@@ -1,0 +1,69 @@
+{
+  "consumer": {
+    "name": "Car API Consumer"
+  },
+  "provider": {
+    "name": "Car API"
+  },
+  "interactions": [
+    {
+      "description": "a request to retrieve all cars",
+      "providerState": "there are cars with ids '45D80D13-D5A2-48D7-8353-CBB4C0EAABF5', '83F9262F-28F1-4703-AB1A-8CFD9E8249C9' and '3E83A96B-2A0C-49B1-9959-26DF23F83AEB'",
+      "request": {
+        "method": "get",
+        "path": "/cars",
+        "headers": {
+          "Accept": "application/json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "body": [
+          {
+            "carId": "45d80d13-d5a2-48d7-8353-cbb4c0eaabf5",
+            "mileage1": 0,
+            "fuel": "Gasoline"
+          },
+          {
+            "carId": "83f9262f-28f1-4703-ab1a-8cfd9e8249c9",
+            "mileage1": 0,
+            "fuel": "Gasoline"
+          },
+          {
+            "carId": "3e83a96b-2a0c-49b1-9959-26df23f83aeb",
+            "mileage1": 15000,
+            "fuel": "Diesel"
+          }
+        ]
+      }
+    },
+    {
+      "description": "a request to create a new car",
+      "request": {
+        "method": "post",
+        "path": "/cars",
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "body": {
+          "carId": "1f587704-2dcc-4313-a233-7b62b4b469db",
+          "mileage": 0,
+          "fuel": "Gasoline"
+        }
+      },
+      "response": {
+        "status": 201,
+        "headers": {
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}
